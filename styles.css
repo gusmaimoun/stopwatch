@@ -6,10 +6,14 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: center;
   align-items: center;
   height: 100vh;
   font-family: 'Henny Penny', system-ui;
@@ -19,6 +23,7 @@ body {
 
 .hbox {
   position: relative;
+  text-align: center;
 }
 
 .diamonds {
@@ -31,29 +36,96 @@ body {
 #one {
   position: absolute;
   top: 0;
-  left: -10px;
-  transform: rotate(-20deg);
+  background-color: #fe6500 !important;
+  left: 50%;
+  transform: rotate(20deg);
+  animation: stars 1000ms;
 }
 
 #two {
   position: absolute;
   top: 10px;
-  left: -20px;
+  left: 25%;
+  background-color: #fe6500 !important;
   transform: rotate(-20deg);
+  animation: stars 1000ms;
 }
 
 #three {
   position: absolute;
-  top: 0;
-  right: -10px;
+  top: 10px;
+  right: 25%;
   transform: rotate(20deg);
+  background-color: #fe6500 !important;
+  animation: stars 1000ms;
 }
 
 #forth {
   position: absolute;
-  top: 10px;
-  right: -20px;
-  transform: rotate(20deg);
+  top: -10px;
+  right: 35%;
+  transform: rotate(-10deg);
+  background-color: #4b0062 !important;
+  animation: stars 1000ms;
+}
+
+#fifth {
+  position: absolute;
+  top: -12px;
+  left: 37%;
+  transform: rotate(0deg);
+  background-color: #4b0062 !important;
+  animation: stars 1000ms;
+}
+
+@keyframes stars {
+  from {
+    transform: translateY(-10000%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes buttons {
+  from {
+    transform: translateY(10000%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes heading {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes right-to-left {
+  from {
+    transform: translateX(10000%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes background {
+  from {
+    transform: translateX(-10000%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
 }
 
 .icon {
@@ -63,6 +135,20 @@ body {
 
 h1 {
   margin-bottom: 4rem;
+  text-decoration: underline #4b0062;
+  -webkit-text-decoration-style: wavy;
+  -moz-text-decoration-style: wavy;
+  text-decoration-style: wavy;
+  animation: heading 2000ms;
+}
+
+.left-box {
+  height: 100vh;
+  width: 100%;
+  background-image: url(yuu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: background 1000ms;
 }
 
 .container {
@@ -71,17 +157,9 @@ h1 {
   min-width: 500px;
   border: 5px solid #4b0062;
   position: relative;
-}
-
-.container::before {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  border: 5px solid #a26bb4;
-  transform: translate(-10px, 10px);
-  background-color: #a26bb4;
-  z-index: -1;
+  animation: right-to-left 1000ms;
+  z-index: 1;
+  box-shadow: -5px 5px #a26bb4;
 }
 
 .timerDisplay {
@@ -105,6 +183,9 @@ h1 {
   justify-content: space-around;
   width: 40%;
   min-width: 500px;
+  animation: buttons 1000ms;
+  display: flex;
+  justify-content: space-between;
 }
 .buttons button {
   width: 120px;
@@ -124,4 +205,49 @@ h1 {
 }
 .buttons button:nth-last-child(1) {
   background-color: #4b0062;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+#form-button {
+  width: 120px;
+  height: 45px;
+  background-color: #4b0062;
+  color: #ffffff;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: buttons 1000ms;
+}
+
+input {
+  width: 100px;
+  height: 45px;
+  border: 3px solid #4b0062;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  outline: #4b0062;
+  color: #4b0062;
+  font-weight: 600;
+  animation: buttons 1000ms;
+}
+
+span {
+  display: block;
+  margin-top: 4rem;
+  font-size: 12px;
+  text-align: center;
+  font-family: 'Crafty Girls', cursive;
+  font-weight: 400;
+  font-style: normal;
+  animation: heading 3000ms;
 }
