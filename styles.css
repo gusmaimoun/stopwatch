@@ -28,9 +28,20 @@ body {
 
 .diamonds {
   background-color: #4b0062;
-  height: 10px;
-  width: 10px;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  height: 15px;
+  width: 15px;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
 }
 
 #one {
