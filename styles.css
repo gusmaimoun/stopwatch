@@ -1,3 +1,7 @@
+:root {
+  --primary-color: blue;
+}
+
 *,
 *:before,
 *:after {
@@ -16,7 +20,7 @@ body {
   justify-items: center;
   align-items: center;
   height: 100vh;
-  font-family: 'Henny Penny', system-ui;
+  font-family: "Henny Penny", system-ui;
   font-weight: 400;
   font-style: normal;
 }
@@ -27,7 +31,7 @@ body {
 }
 
 .diamonds {
-  background-color: #4b0062;
+  background-color: var(--primary-color);
   height: 15px;
   width: 15px;
   clip-path: polygon(
@@ -76,7 +80,7 @@ body {
   top: -10px;
   right: 35%;
   transform: rotate(-10deg);
-  background-color: #4b0062 !important;
+  background-color: var(--primary-color) !important;
   animation: stars 1000ms;
 }
 
@@ -85,7 +89,7 @@ body {
   top: -12px;
   left: 37%;
   transform: rotate(0deg);
-  background-color: #4b0062 !important;
+  background-color: var(--primary-color) !important;
   animation: stars 1000ms;
 }
 
@@ -146,7 +150,7 @@ body {
 
 h1 {
   margin-bottom: 4rem;
-  text-decoration: underline #4b0062;
+  text-decoration: underline var(--primary-color);
   -webkit-text-decoration-style: wavy;
   -moz-text-decoration-style: wavy;
   text-decoration-style: wavy;
@@ -166,7 +170,7 @@ h1 {
   background-color: #fe6500;
   width: 40%;
   min-width: 500px;
-  border: 5px solid #4b0062;
+  border: 5px solid var(--primary-color);
   position: relative;
   animation: right-to-left 1000ms;
   z-index: 1;
@@ -179,8 +183,8 @@ h1 {
   background-color: #fe6500;
   left: 4%;
   padding: 40px 0;
-  font-family: 'Roboto mono', monospace;
-  color: #4b0062;
+  font-family: "Roboto mono", monospace;
+  color: var(--primary-color);
   font-size: 40px;
   display: flex;
   align-items: center;
@@ -201,10 +205,10 @@ h1 {
 .buttons button {
   width: 120px;
   height: 45px;
-  background-color: #4b0062;
+  background-color: var(--primary-color);
   color: #ffffff;
   border: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
@@ -212,10 +216,10 @@ h1 {
 }
 
 .buttons button:nth-last-child(2) {
-  background-color: #4b0062;
+  background-color: var(--primary-color);
 }
 .buttons button:nth-last-child(1) {
-  background-color: #4b0062;
+  background-color: var(--primary-color);
 }
 
 form {
@@ -227,10 +231,10 @@ form {
 #form-button {
   width: 120px;
   height: 45px;
-  background-color: #4b0062;
+  background-color: var(--primary-color);
   color: #ffffff;
   border: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
@@ -240,14 +244,14 @@ form {
 input {
   width: 100px;
   height: 45px;
-  border: 3px solid #4b0062;
-  font-family: 'Poppins', sans-serif;
+  border: 3px solid var(--primary-color);
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
-  outline: #4b0062;
-  color: #4b0062;
+  outline: var(--primary-color);
+  color: var(--primary-color);
   font-weight: 600;
   animation: buttons 1000ms;
 }
@@ -257,7 +261,7 @@ span {
   margin-top: 4rem;
   font-size: 12px;
   text-align: center;
-  font-family: 'Crafty Girls', cursive;
+  font-family: "Crafty Girls", cursive;
   font-weight: 400;
   font-style: normal;
   animation: heading 3000ms;
